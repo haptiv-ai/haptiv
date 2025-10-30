@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand-maroon:#4A1026;
+  --brand-violet:#5A2A83;
+  --brand-vermillion:#E34234;
+  --brand-teal:#2CB1A3;
+  --brand-mustard:#E3B341;
+  --offwhite:#FAFAF8;
+}
+body{ background:var(--offwhite); color:#111; }
+.font-serif{ font-family: "DM Serif Display", serif; }
