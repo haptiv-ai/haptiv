@@ -1,0 +1,47 @@
+[
+  {
+    "id":"dtac.security.1",
+    "title":"DTAC: Security controls",
+    "applies_if":{"setting_includes":["NHS"],"data_flows_includes":["PHI in app"]},
+    "evidence":[{"type":"doc","name":"Pen test summary"},{"type":"policy","name":"Access control policy"}],
+    "severity":"high","stage_min":"prototype",
+    "success_criteria":["MFA enabled","CVE patch policy <=30d"],
+    "owner":"Engineering"
+  },
+  {
+    "id":"ukgdpr.dpia",
+    "title":"UK GDPR: DPIA",
+    "applies_if":{"data_flows_includes":["PHI in app"]},
+    "evidence":[{"type":"doc","name":"DPIA"}],
+    "severity":"high","stage_min":"prototype",
+    "success_criteria":["DPIA approved"],
+    "owner":"Compliance"
+  },
+  {
+    "id":"dcb0129",
+    "title":"DCB0129 Clinical risk mgmt (manufacturer)",
+    "applies_if":{"setting_includes":["NHS"],"risk_area_focus_includes":["safety"]},
+    "evidence":[{"type":"doc","name":"Clinical Safety Case"},{"type":"doc","name":"Hazard Log"}],
+    "severity":"high","stage_min":"pilot",
+    "success_criteria":["CSO appointed","SOPs in place"],
+    "owner":"Clinical"
+  },
+  {
+    "id":"mhra.samd",
+    "title":"MHRA SaMD classification prep",
+    "applies_if":{"product_includes":["algorithmic decision support"]},
+    "evidence":[{"type":"doc","name":"Intended Use Statement"}],
+    "severity":"med","stage_min":"prototype",
+    "success_criteria":["Classification rationale"],
+    "owner":"Regulatory"
+  },
+  {
+    "id":"dtac.interop",
+    "title":"DTAC: Interoperability",
+    "applies_if":{"integrations_includes":["FHIR","EMIS","Cerner"]},
+    "evidence":[{"type":"doc","name":"FHIR conformance notes"}],
+    "severity":"med","stage_min":"pilot",
+    "success_criteria":["FHIR R4 mappings"],
+    "owner":"Engineering"
+  }
+]
